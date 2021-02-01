@@ -12,7 +12,7 @@
 - has_many :purposes
 
 
-## porposes テーブル
+## purposes テーブル
 
 | Column   | Type     | Options       |
 | -------- | -------- | ------------- |
