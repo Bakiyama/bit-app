@@ -10,15 +10,30 @@
 
 ### Association
 - has_many :purposes
+- has_many :blocks
 
 
 ## purposes テーブル
 
-| Column   | Type     | Options       |
-| -------- | -------- | ------------- |
-| name     | string   | null: false   |
-| unit     | integer  | null: false   |
-| height   | integer  | null: false   |
+| Column   | Type       | Options           |
+| -------- | ---------- | ----------------- |
+| name     | string     | null: false       |
+| unit     | integer    | null: false       |
+| user     | references | foreign_key: true |
 
 ### Association
 - belongs_to :user
+- has_many :blocks
+
+
+## blocks テーブル
+
+| Column   | Type       | Options           |
+| -------- | ---------- | ----------------- |
+| value    | integer    | null: false       |
+| user     | references | foreign_key: true |
+| purpose  | references | foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :purpose
