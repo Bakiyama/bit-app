@@ -1,0 +1,10 @@
+.header {
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  text-align: center;
+  font-size: 4vh;
+  color:rgb(74, 180, 180);
+}

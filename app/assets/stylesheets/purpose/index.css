@@ -1,0 +1,38 @@
+
+.main {
+  background-color:white;
+  height: 100vh;
+}
+
+.purpose {
+  display: flex;
+  justify-content: center;  
+}
+
+.purpose-content {
+  margin:  20px;
+}
+
+.purpose-box {
+  background-color:rgb(74, 180, 180);
+  border-radius: 20%;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, .5);
+  border: 2px solid white;
+  width: 33vh;
+  height: 33vh;
+}
+
+.purpose-height {
+  color:rgb(187, 243, 235);
+  font-size: 12vh;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.purpose-name {
+  color:cornflowerblue;
+  margin-top: 20px;
+  width: 33vh;
+  font-size: 3vh;
+  text-align: center;
+}
