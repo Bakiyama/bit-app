@@ -7,4 +7,5 @@ class PurposesController < ApplicationController
 
   def create
   end
+  
 end
