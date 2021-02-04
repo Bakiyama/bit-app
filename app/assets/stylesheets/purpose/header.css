@@ -15,9 +15,6 @@
   text-align: center;
 }
 
-.sessions {
-  
-}
 
 .session {
   display: flex;
@@ -29,6 +26,14 @@
 margin-right: 20px;
 }
 
+.user {
+  margin-right: 20px;
+}
+
 .letter {
   text-align: center;
+}
+
+.hidden {
+  display: none;
 }
