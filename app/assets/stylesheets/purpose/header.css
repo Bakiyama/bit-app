@@ -1,15 +1,10 @@
-* {
-  box-sizing:border-box;
-}
 
 .contents {
-  height: 20px;
-  width: 100vw;
   padding: 0 15vw;
-  margin-bottom: 70px;
+  background-color:rgb(243, 243, 243);
 }
 
-.header-title {
+.header {
   font-size: 7vh;
   color:rgb(74, 180, 180);
   text-align: center;
@@ -22,8 +17,16 @@
   margin: 0 0 0 auto;
 }
 
-.register {
+.singnout {
+  margin-right: 20px;
+  text-decoration: none;
+  color:rgb(74, 180, 180);
+}
+
+.sign-up_in {
 margin-right: 20px;
+text-decoration: none;
+color:rgb(74, 180, 180);
 }
 
 .user {

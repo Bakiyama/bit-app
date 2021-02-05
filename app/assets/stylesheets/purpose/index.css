@@ -1,16 +1,14 @@
 
 .main {
-  background-color:white;
+  background-color:rgb(243, 243, 243);
   height: 100vh;
+  padding: 0 15vw;
+  padding-top: 20px;
 }
 
 .purpose {
   display: flex;
-  justify-content: center;  
-}
-
-.purpose-content {
-  margin:  20px;
+  justify-content:space-between
 }
 
 .purpose-box {
@@ -18,21 +16,24 @@
   border-radius: 20%;
   box-shadow: 0 10px 10px -5px rgba(0, 0, 0, .5);
   border: 2px solid white;
-  width: 33vh;
-  height: 33vh;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .purpose-height {
   color:rgb(187, 243, 235);
-  font-size: 12vh;
-  text-align: center;
-  margin-top: 40px;
+  font-size: 30px;
 }
 
 .purpose-name {
   color:cornflowerblue;
   margin-top: 20px;
-  width: 33vh;
-  font-size: 3vh;
   text-align: center;
+}
+
+.add-purposes {
+  margin-top: 20px;
 }
