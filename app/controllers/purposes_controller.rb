@@ -1,6 +1,10 @@
 class PurposesController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
+
   def index
-    @purposes = Purpose.includes(:user)
+    if user_signed_in?
+      @purposes = current_user.purposes
+    end
   end
 
   def show
