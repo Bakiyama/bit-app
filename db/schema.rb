@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_05_063457) do
+ActiveRecord::Schema.define(version: 2021_02_08_073329) do
+
+  create_table "blocks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "value", null: false
+    t.bigint "user_id"
+    t.bigint "purpose_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["purpose_id"], name: "index_blocks_on_purpose_id"
+    t.index ["user_id"], name: "index_blocks_on_user_id"
+  end
 
   create_table "purposes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -34,5 +44,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_063457) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "blocks", "purposes"
+  add_foreign_key "blocks", "users"
   add_foreign_key "purposes", "users"
 end
