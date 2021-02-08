@@ -2,5 +2,17 @@
 
 <div class='main'>
   <div class='new-purpose'>継続目標を決めてください。</div>
-  <%# <%= form_with(model: @item, local: true) do |f| %> 
+    <%=form_with model: @purpose, local: true do |f|%>
+      <div class="new-purpose_name">
+        <%= f.text_field :name, class: 'new-purpose_namefield', placeholder: '継続目標を入力してください'%>
+      </div>
+      <div class="new-purpose_unit">
+        <%= f.text_field :unit, class: 'new-purpose_unitfield', placeholder: '1m = ?'%>
+      </div>
+      <div class="new-purpose_submit">
+        <%= f.submit class: 'new-purpose_botten'%>
+      </div>
+    <% end %>
+  
+
 </div>
