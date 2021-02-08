@@ -2,41 +2,23 @@
 
 <div class='main'>
   <div class='purpose'>
-    <div class='purpose-content'>
-      <div class='purpose-box'>
-        <div class='purpose-height'>15M</div>
+    <% @purposes.each do |purpose| %>    
+    <div class='purpose-contents'>
+      <div class='purpose-content'>
+      <%= link_to purpose_path(purpose.id), class:'purpose_link' do %>
+        <div class='purpose-box'>
+          <div class='purpose-height'>15M</div>
+        </div>
+        <div class='purpose-name'><%= purpose.name %></div>
+      <% end %>
       </div>
-      <div class='purpose-name'>レベル上げ</div>
     </div>
-    <div class='purpose-content'>
-      <div class='purpose-box'>
-        <div class='purpose-height'>15M</div>
-      </div>
-      <div class='purpose-name'>レベル上げ</div>
-    </div>
-    <div class='purpose-content'>
-      <div class='purpose-box'>
-        <div class='purpose-height'>15M</div>
-      </div>
-      <div class='purpose-name'>レベル上げ</div>
-    </div>
-    <div class='purpose-content'>
-      <div class='purpose-box'>
-        <div class='purpose-height'>15M</div>
-      </div>
-      <div class='purpose-name'>レベル上げ</div>
-    </div>
-    <div class='purpose-content'>
-      <div class='purpose-box'>
-        <div class='purpose-height'>15M</div>
-      </div>
-      <div class='purpose-name'>レベル上げ</div>
-    </div>
+    <% end %>
   </div>
 
   <div class='add-purposes'>
     <div class='add-content'>
-      <a href="/purposes/new" class:'add-purpose' >
+      <a href="/purposes/new" class='add-purpose' >
         <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
         </svg>
