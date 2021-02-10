@@ -1,11 +1,10 @@
 
 .contents {
-  padding: 0 15vw;
   background-color:rgb(243, 243, 243);
 }
 
 .header {
-  font-size: 7vh;
+  font-size: 70px;
   color:rgb(74, 180, 180);
   text-align: center;
 }
@@ -35,6 +34,7 @@ color:rgb(74, 180, 180);
 
 .letter {
   text-align: center;
+  font-size: ;
 }
 
 .hidden {
