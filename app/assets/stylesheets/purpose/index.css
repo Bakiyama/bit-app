@@ -1,14 +1,14 @@
 
 .main {
   background-color:rgb(243, 243, 243);
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 15vw;
-  padding-top: 20px;
+  position: relative;
 }
 
-.purpose {
-  display: flex;
-  justify-content:space-between
+.purpose-contents {
+  list-style: none;
+  text-align: center;
 }
 
 .purpose-box {
@@ -16,8 +16,9 @@
   border-radius: 20%;
   box-shadow: 0 10px 10px -5px rgba(0, 0, 0, .5);
   border: 2px solid white;
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
+  margin: 40px 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,6 +35,15 @@
   text-align: center;
 }
 
-.add-purposes {
-  margin-top: 20px;
+.add-content {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 50px;
+}
+
+.add-purpose {
+  color:rgb(74, 180, 180);
 }
