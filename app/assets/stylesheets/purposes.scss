@@ -9,3 +9,16 @@
 .purpose_link {
   text-decoration: none;
 }
+
+.purpose {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.purpose::after {
+  display: block;
+  content:"";
+  width: 200px;
+  margin: 40px 50px;
+}
