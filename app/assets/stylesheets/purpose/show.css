@@ -17,15 +17,6 @@
   align-items: center;
 }
 
-.box {
-  border-radius: 20%;
-  height: 120px;
-  width: 120px;
-  background-color:rgb(74, 180, 180);
-  border: white solid 2px;
-  margin-left: 100px;
-}
-
 .created_time {
   font-size: 15px;
   width: 100px;
