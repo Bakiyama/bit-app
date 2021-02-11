@@ -9,6 +9,8 @@ class PurposesController < ApplicationController
 
   def show
     @purpose = Purpose.find(params[:id])
+    @block = Block.new
+    @blocks = @purpose.blocks.includes(:user)
   end
 
   def new
