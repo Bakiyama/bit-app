@@ -10,5 +10,6 @@ class Value < ActiveHash::Base
     { id: 8, name: 'いつもの4.5倍できた' }
     { id: 9, name: 'いつもの5倍できた' }
   ]
-
+  include ActiveHash::Associations
+  has_many :blocks
 end
