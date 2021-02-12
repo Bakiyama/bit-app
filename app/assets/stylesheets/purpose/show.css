@@ -45,6 +45,21 @@
   width: 880px;
   height: 85px;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_block_form{
+  width: 70%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.value {
+  width: 250px;
 }
 
 .btn { 
@@ -62,4 +77,3 @@
   justify-content: center;
   align-items: center;
 }
-
