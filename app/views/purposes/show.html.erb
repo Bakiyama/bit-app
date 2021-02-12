@@ -3,52 +3,93 @@
 
   <div class='block_field'>
     <div class='blocks'>
-      <div class='block'>
-        <div class='box_1m'></div>
-        <div class='created_time'>2021, 04, 01</div>
-      </div>
-      <div class='block'>
-        <div class='box_1m_half'></div>
-        <div class='created_time'>2021, 04, 01</div>
-      </div>
-      <div class='block'>
-        <div class='box_2m'></div>
-        <div class='created_time'>2021, 04, 01</div>
-      </div>
-      <div class='block'>
-        <div class='box_2m_half'></div>
-        <div class='created_time'>2021, 04, 01</div>
-      </div>
-      <div class='block'>
-        <div class='box_3m'></div>
-        <div class='created_time'>2021, 04, 01</div>
-      </div>
-      <div class='block'>
-        <div class='box_3m_half'></div>
-        <div class='created_time'>2021, 04, 01</div>
-      </div>
-      <div class='block'>
-        <div class='box_4m'></div>
-        <div class='created_time'>2021, 04, 01</div>
-      </div>
-      <div class='block'>
-        <div class='box_4m_half'></div>
-        <div class='created_time'>2021, 04, 01</div>
-      </div>
-      <div class='block'>
-        <div class='box_5m'></div>
-        <div class='created_time'>2021, 04, 01</div>
-      </div>
-      <div class='block'>
-        <div class='box_5m_half'></div>
-        <div class='created_time'>2021, 04, 01</div>
-      </div>
+      <% @blocks.each do |block| %>
+        <% if block.value / block.purpose.unit >= 1 && (block.value.to_f / block.purpose.unit.to_f) < 1.5 %>
+          <div class='block'>
+            <div class='box_1m'><%= block.value %></div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+        
+        <% if (block.value.to_f / block.purpose.unit.to_f) >= 1.5 && (block.value / block.purpose.unit) < 2 %>
+          <div class='block'>
+            <div class='box_1m_half'><%= block.value %></div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+        <% if (block.value / block.purpose.unit) >= 2 && (block.value.to_f / block.purpose.unit.to_f) < 2.5 %>
+          <div class='block'>
+            <div class='box_2m'><%= block.value %></div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+        <% if (block.value.to_f / block.purpose.unit.to_f) >= 2.5 && (block.value / block.purpose.unit) < 3 %>
+          <div class='block'>
+            <div class='box_2m_half'><%= block.value %></div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+        <% if (block.value / block.purpose.unit) >= 3 && (block.value.to_f / block.purpose.unit.to_f) < 3.5 %>
+          <div class='block'>
+            <div class='box_3m'><%= block.value %></div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+        <% if (block.value.to_f / block.purpose.unit.to_f) >= 3.5 && (block.value / block.purpose.unit) < 4 %>
+          <div class='block'>
+            <div class='box_3m_half'><%= block.value %></div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+        <% if (block.value / block.purpose.unit) >= 4 && (block.value.to_f / block.purpose.unit.to_f) < 4.5 %>
+          <div class='block'>
+            <div class='box_4m'><%= block.value %></div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+        <% if (block.value.to_f / block.purpose.unit.to_f) >= 4.5 && (block.value / block.purpose.unit) < 5 %>
+          <div class='block'>
+            <div class='box_4m_half'><%= block.value %></div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+        <% if (block.value / block.purpose.unit) >= 5 && (block.value.to_f / block.purpose.unit.to_f) < 5.5 %>
+          <div class='block'>
+            <div class='box_5m'><%= block.value %></div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+        <% if (block.value.to_f / block.purpose.unit.to_f) >= 5.5 && (block.value / block.purpose.unit) < 6 %>
+          <div class='block'>
+            <div class='box_5m_half'><%= block.value %></div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+      <% end %>
     </div>
   </div>
 
   <div class='base_ground'>
     <div class='ground'>
-      <div class='inner_ground'></div>
+      <div class='inner_ground'>
+          <%= form_with(model: [@purpose, @block], local: true, class:'add_block_form') do |f|%>
+              <div class="value_field">
+                <%= f.text_field :value, placeholder:'進捗を入力してください。', class:'value' %>
+              </div>
+              <div class="action">
+                <%= f.submit "追加", class: :form__btn  %>
+              </div>
+          <% end %>
+      </div>
     </div>
   </div>
 

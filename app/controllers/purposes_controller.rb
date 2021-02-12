@@ -10,7 +10,7 @@ class PurposesController < ApplicationController
   def show
     @purpose = Purpose.find(params[:id])
     @block = Block.new
-    @blocks = @purpose.blocks.includes(:user)
+    @blocks = @purpose.blocks.includes(:user).order('created_at DESC')
   end
 
   def new
