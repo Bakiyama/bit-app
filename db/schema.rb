@@ -13,7 +13,8 @@
 ActiveRecord::Schema.define(version: 2021_02_08_073329) do
 
   create_table "blocks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "value", null: false
+    t.integer "value_id", null: false
+    t.text "comment", null: false
     t.bigint "user_id"
     t.bigint "purpose_id"
     t.datetime "created_at", precision: 6, null: false

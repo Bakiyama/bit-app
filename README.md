@@ -28,11 +28,12 @@
 
 ## blocks テーブル
 
-| Column   | Type       | Options           |
-| -------- | ---------- | ----------------- |
-| value    | integer    | null: false       |
-| user     | references | foreign_key: true |
-| purpose  | references | foreign_key: true |
+| Column    | Type       | Options           |
+| --------  | ---------- | ----------------- |
+| value_id  | integer    | null: false       |
+| comment   | text       | null: false       |
+| user      | references | foreign_key: true |
+| purpose   | references | foreign_key: true |
 
 ### Association
 - belongs_to :user
