@@ -9,7 +9,7 @@
       <div class='purpose-content'>
       <%= link_to purpose_path(purpose.id), class:'purpose_link' do %>
         <div class='purpose-box'>
-          <div class='purpose-height'>15M</div>
+          <div class='purpose-height'><%= purpose.blocks.length %> blocks</div>
         </div>
         <div class='purpose-name'><%= purpose.name %></div>
       <% end %>
