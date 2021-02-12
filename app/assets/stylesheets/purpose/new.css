@@ -1,0 +1,26 @@
+.new_main {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.new_purpose {
+  text-align: center;
+}
+
+.new_purpose_messe {
+  margin-top: 50px;
+}
+
+.new_purpose_form{
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.new-purpose_field {
+  width: 300px;
+  margin-bottom: 20px;
+}
