@@ -12,6 +12,6 @@ class BlocksController < ApplicationController
 
   private
   def block_params
-    params.require(:block).permit(:value).merge(user_id: current_user.id, purpose_id: params[:purpose_id])
+    params.require(:block).permit(:value_id, :comment).merge(user_id: current_user.id, purpose_id: params[:purpose_id])
   end
 end
