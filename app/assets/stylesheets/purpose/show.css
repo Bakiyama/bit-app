@@ -1,6 +1,26 @@
+.which_purpose {
+  display: flex;
+  align-items: center;
+}
+
+.purpose_btn {
+  height: 40px;
+  width: 80px;
+  background-color:white;
+  color:rgb(74, 180, 180);
+  border: rgb(74, 180, 180) 2px solid;
+  border-radius: 10%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .purpose_name {
   font-size: 40px;
   color:rgb(74, 180, 180);
+  margin-right: 10px;
 }
 
 .unit_filed {
