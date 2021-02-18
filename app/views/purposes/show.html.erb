@@ -1,11 +1,17 @@
 <div class='main'>
   <%= render "shared/header" %> 
 
-  <div class='which_purpose'>
-    <div class='purpose_name'>
-      <%= @purpose.name %>
-
-      <>
+  <div class='which_purposes'>
+    <div class='which_purpose'>
+      <div class='purpose_name'>
+        目標：<%= @purpose.name %>
+      </div>
+      <div class='purpose_btn'>
+        <div class='purpose_edit'>編集する</div>
+      </div>
+      <div class='purpose_btn'>
+        <div class='purpose_delete'>削除する</div>
+      </div>  
     </div>
     <div class='unit_filed'>
       <div class='box_sample'></div>：<%= @purpose.per %><%= @purpose.unit %>
