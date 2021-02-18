@@ -1,89 +1,47 @@
-.box_1m {
-  border-radius: 20%;
-  height: 120px;
-  width: 120px;
+.box {
+  border-radius: 15%;
+  height: 100px;
+  width: 100px;
   background-color:rgb(74, 180, 180);
   border: white solid 2px;
-  margin-left: 100px;
 }
 
-.box_1m_half {
+.two_boxes {
   border-radius: 15px;
-  height: 180px;
-  width: 120px;
-  background-color:rgb(100, 248, 248);
-  border: white solid 2px;
-  margin-left: 100px;
-}
-
-.box_2m {
-  border-radius: 15px;
-  height: 240px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
   background-color:rgb(231, 229, 86);
   border: white solid 2px;
-  margin-left: 100px;
 }
 
-.box_2m_half {
+.three_boxes {
   border-radius: 15px;
-  height: 300px;
-  width: 120px;
-  background-color:rgb(255, 253, 107);
-  border: white solid 2px;
-  margin-left: 100px;
-}
-
-.box_3m {
-  border-radius: 15px;
-  height: 360px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
   background-color:rgb(74, 102, 180);
   border: white solid 2px;
-  margin-left: 100px;
 }
 
-.box_3m_half {
+.four_boxes {
   border-radius: 15px;
-  height: 420px;
-  width: 120px;
-  background-color:rgb(104, 144, 255);
-  border: white solid 2px;
-  margin-left: 100px;
-}
-
-.box_4m {
-  border-radius: 15px;
-  height: 480px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
   background-color:rgb(74, 180, 79);
   border: white solid 2px;
-  margin-left: 100px;
 }
 
-.box_4m_half {
+.five_boxes {
   border-radius: 15px;
-  height: 540px;
-  width: 120px;
-  background-color:rgb(95, 255, 103);
-  border: white solid 2px;
-  margin-left: 100px;
-}
-
-.box_5m {
-  border-radius: 15px;
-  height: 600px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
   background-color:rgb(180, 74, 74);
   border: white solid 2px;
-  margin-left: 100px;
 }
 
-.box_5m_half {
-  border-radius: 15px;
-  height: 660px;
-  width: 120px;
-  background-color:rgb(250, 61, 61);
+.box_sample {
+  border-radius: 15%;
+  height: 35px;
+  width: 35px;
+  background-color:rgb(74, 180, 180);
   border: white solid 2px;
-  margin-left: 100px;
 }
