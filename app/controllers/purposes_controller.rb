@@ -29,6 +29,6 @@ class PurposesController < ApplicationController
   private
 
   def purpose_params
-    params.require(:purpose).permit(:name, :unit).merge(user_id: current_user.id)
+    params.require(:purpose).permit(:name, :unit, :per).merge(user_id: current_user.id)
   end
 end
