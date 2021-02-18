@@ -9,14 +9,14 @@
       <div class='purpose-content'>
       <%= link_to purpose_path(purpose.id), class:'purpose_link' do %>
         <div class='purpose-box'>
-          <div class='purpose-height'><%= purpose.blocks.length %> blocks</div>
+          <div class='purpose-height'><%= purpose.blocks.sum(:value_id) %> blocks</div>
         </div>
         <div class='purpose-name'><%= purpose.name %></div>
       <% end %>
       </div>
     </li>
     <% end %>
-  <% end %>
+
     <div class='add-content'>
       <a href="/purposes/new" class='add-purpose' >
         <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
@@ -24,6 +24,15 @@
         </svg>
       </a>
     </div>
+  <% else %>
+    <div class='introduction'>
+      <h1>本気の積木</h1>
+      <br>
+      <p>BitBlocksへようこそ！</p>
+      <p>積み上げている物事を、見える化してみました。</p>
+      <p></p>
+    </div>
+  <% end %>
   </ul>
 
 </div>
