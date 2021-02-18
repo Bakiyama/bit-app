@@ -1,0 +1,32 @@
+<header>
+  <div class='contents'>
+    <div class='header'>
+      <%= link_to 'BitBlocks', root_path, class:'header-title' %>
+    </div>
+    
+    <div class='sessions'>
+      <div class='session'>
+        <% if user_signed_in? %>
+          <div class='user'>
+            <%= render "shared/iconUser" %>
+            <div class='letter'><%= current_user.nickname %></div>
+          </div>
+          <a data-method="delete" href="/users/sign_out" class='singnout'>
+            <%= render "shared/iconSignout" %>
+            <div class='letter'>Sign Out</div>
+          </a>
+        <% else %>
+          <a href="/users/sign_up", class='sign-up_in'>
+            <%= render "shared/iconSignup" %>
+            <div class='letter'>Sign Up</div>
+          </a>
+          <a href="/users/sign_in", class='sign-up_in'>
+            <%= render "shared/iconSignin" %>
+            <div class='letter'>Sign In</div>
+          </a>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</header>

@@ -1,0 +1,25 @@
+.regist_blk {
+  display: flex;
+  justify-content: center;
+}
+
+.registration-main {
+  text-align: center;
+}
+
+.top-icon {
+  text-align: center;
+}
+
+.field {
+  width: 300px;
+}
+
+.input_field {
+  width: 100%;
+  margin-top: 20px; 
+}
+
+.actions {
+  margin: 30px auto 30px;
+}

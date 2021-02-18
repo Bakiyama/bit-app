@@ -1,0 +1,47 @@
+.box {
+  border-radius: 15%;
+  height: 100px;
+  width: 100px;
+  background-color:rgb(74, 180, 180);
+  border: white solid 2px;
+}
+
+.two_boxes {
+  border-radius: 15px;
+  height: 100px;
+  width: 100px;
+  background-color:rgb(231, 229, 86);
+  border: white solid 2px;
+}
+
+.three_boxes {
+  border-radius: 15px;
+  height: 100px;
+  width: 100px;
+  background-color:rgb(74, 102, 180);
+  border: white solid 2px;
+}
+
+.four_boxes {
+  border-radius: 15px;
+  height: 100px;
+  width: 100px;
+  background-color:rgb(74, 180, 79);
+  border: white solid 2px;
+}
+
+.five_boxes {
+  border-radius: 15px;
+  height: 100px;
+  width: 100px;
+  background-color:rgb(180, 74, 74);
+  border: white solid 2px;
+}
+
+.box_sample {
+  border-radius: 15%;
+  height: 35px;
+  width: 35px;
+  background-color:rgb(74, 180, 180);
+  border: white solid 2px;
+}

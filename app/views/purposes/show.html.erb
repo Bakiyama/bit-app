@@ -1,0 +1,146 @@
+<div class='main'>
+  <%= render "shared/header" %> 
+
+  <div class='which_purpose'>
+    <div class='purpose_name'>
+      <%= @purpose.name %>
+
+      <>
+    </div>
+    <div class='unit_filed'>
+      <div class='box_sample'></div>：<%= @purpose.per %><%= @purpose.unit %>
+    </div>
+  </div>
+
+  <div class='block_field'>
+    <div class='blocks'>
+
+      <div class='height'>
+        <div class='blocks_height'>
+          <%= @purpose.blocks.sum(:value_id) %>m(<%= @purpose.blocks.sum(:value_id) * @purpose.per %><%= @purpose.unit %>)
+        </div>
+      </div>
+
+      <% @blocks.each do |block| %>
+        <% if block.value_id == 1 %>
+          <div class='block'>
+            <div class='comment_field'>
+              <div class='comment_content'>
+                <%= block.comment %>
+              </div>
+            </div>
+            <div class='progress_block'>
+              <div class='box'></div>
+            </div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+        
+        <% if block.value_id == 2 %>
+          <div class='block'>
+            <div class='comment_field'>
+              <%= block.comment %>
+            </div>
+            <div class='progress_block'>
+              <div class='two_boxes'></div>
+              <div class='two_boxes'></div>
+            </div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+        <% if block.value_id == 3 %>
+          <div class='block'>
+            <div class='comment_field'>
+              <%= block.comment %>
+            </div>
+            <div class='progress_block'>
+              <div class='three_boxes'></div>
+              <div class='three_boxes'></div>
+              <div class='three_boxes'></div>
+            </div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+        <% if block.value_id == 4 %>
+          <div class='block'>
+            <div class='comment_field'>
+              <%= block.comment %>
+            </div>
+            <div class='progress_block'>
+              <div class='four_boxes'></div>
+              <div class='four_boxes'></div>
+              <div class='four_boxes'></div>
+              <div class='four_boxes'></div>
+            </div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+        <% if block.value_id == 5 %>
+          <div class='block'>
+            <div class='comment_field'>
+              <%= block.comment %>
+            </div>
+            <div class='progress_block'>
+              <div class='five_boxes'></div>
+              <div class='five_boxes'></div>
+              <div class='five_boxes'></div>
+              <div class='five_boxes'></div>
+              <div class='five_boxes'></div>
+            </div>
+            <div class='created_time'><%= block.created_at %></div>
+          </div>
+        <% end %>
+
+      <% end %>
+    </div>
+  </div>
+
+  <div class='base_ground'>
+    <div class='ground'>
+      <div class='inner_ground'>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class='btn'>
+
+    <a class='add-btn' id='addBlockBtn'>
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+          </svg>
+    </a>
+
+    <div class='formblock' id='formblock'>
+      <div class='form_content'>
+      <%= form_with(model: [@purpose, @block], local: true, class:'add_block_form') do |f|%>
+        <div class='form_title'>Add Block</div>
+        <div class='input_progress'>
+          <div class="field_name">Progress</div>
+          <%= f.collection_select(:value_id, Value.all, :id, :name, {}, {class:"form_slct"}) %>
+        </div>
+
+        <div class='input_progress'>
+          <div class="field_name">Comment</div>
+          <%= f.text_area :comment, placeholder:'一言メモ(12文字まで)', class:'form_comment', cols: 12, maxlength: 36 %>
+        </div>
+
+        <div class="input_btn">
+          <%= f.submit "Add", class:'action_btn' %>
+          <div class='action_btn' id='actionBtn'>Close</div>
+        </div>
+
+      <% end %>
+      </div>
+    </div>
+
+    <div class='mask' id='mask'></div>
+
+  </div>
+
+  
+</div>

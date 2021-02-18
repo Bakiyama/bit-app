@@ -1,0 +1,24 @@
+// Place all the styles related to the purposes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header-title{
+  text-decoration: none;
+  color:rgb(74, 180, 180);
+}
+.purpose_link {
+  text-decoration: none;
+}
+
+.purpose {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.purpose::after {
+  display: block;
+  content:"";
+  width: 200px;
+  margin: 40px 50px;
+}

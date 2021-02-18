@@ -1,0 +1,38 @@
+<div class='main'>
+  <%= render "shared/header" %>
+
+  <ul class='purpose'>
+
+  <% if user_signed_in? %>
+    <% @purposes.each do |purpose| %>    
+    <li class='purpose-contents'>
+      <div class='purpose-content'>
+      <%= link_to purpose_path(purpose.id), class:'purpose_link' do %>
+        <div class='purpose-box'>
+          <div class='purpose-height'><%= purpose.blocks.sum(:value_id) %> blocks</div>
+        </div>
+        <div class='purpose-name'><%= purpose.name %></div>
+      <% end %>
+      </div>
+    </li>
+    <% end %>
+
+    <div class='add-content'>
+      <a href="/purposes/new" class='add-purpose' >
+        <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        </svg>
+      </a>
+    </div>
+  <% else %>
+    <div class='introduction'>
+      <h1>本気の積木</h1>
+      <br>
+      <p>BitBlocksへようこそ！</p>
+      <p>積み上げている物事を、見える化してみました。</p>
+      <p></p>
+    </div>
+  <% end %>
+  </ul>
+
+</div>
