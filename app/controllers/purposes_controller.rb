@@ -17,6 +17,22 @@ class PurposesController < ApplicationController
     @purpose = Purpose.new
   end
 
+  def edit
+    @purpose = Purpose.find(params[:id])
+    unless current_user.id == @purpose.user_id
+      redirect_to action: :index
+    end
+  end
+
+  def update
+    purpose = Purpose.find(params[:id])
+    if purpose.update(purpose_params)
+      redirect_to purpose_path
+    else
+      render :edit
+    end
+  end
+
   def create
     @purpose = Purpose.new(purpose_params)
     if @purpose.save
