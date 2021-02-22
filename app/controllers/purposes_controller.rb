@@ -33,6 +33,12 @@ class PurposesController < ApplicationController
     end
   end
 
+  def destroy
+    purpose = Purpose.find(params[:id])
+    purpose.destroy
+    redirect_to root_path
+  end
+
   def create
     @purpose = Purpose.new(purpose_params)
     if @purpose.save
