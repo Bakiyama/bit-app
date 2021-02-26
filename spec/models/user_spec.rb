@@ -4,58 +4,56 @@ RSpec.describe User, type: :model do
   before do
     @user = FactoryBot.build(:user)
   end
-  
+
   describe 'ユーザー登録' do
     it "ユーザーの新規登録には、メールアドレスが必須であること" do
+      @user.email = nil
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Email can't be blank")
     end
     
     it "ユーザーの新規登録には、メールアドレスは一意性である" do
+      @user.save
+      another_user = FactoryBot.build(:user)
+      another_user.email = @user.email
+      another_user.valid?
+      expect(another_user.errors.full_messages).to include("Email has already been taken")
     end
     
     it "ユーザーの新規登録には、メールアドレスは@を含む必要があること" do
+      @user.email = 'testexample'
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Email is invalid")
     end
     
     it "ユーザーの新規登録には、パスワードが必須であること" do
+      @user.password = nil
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Password can't be blank")
     end
     
     it "ユーザーの新規登録には、パスワードは6文字以上であること" do
+      @user.password = '11111'
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
     end
     
     it "ユーザーの新規登録には、パスワードは確認用を含めて2回入力すること" do
+      @user.password = '111111'
+      @user.password_confirmation != @user.password
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
     end
     
-    it "ユーザーの新規登録には、ユーザー名が必須であること" do
-    end
-    
-    it "ユーザーの新規登録には、プロフィールが必須であること" do
-    end
-    
-    it "ユーザーの新規登録には、所属が必須であること" do
-    end
-    
-    it "ユーザーの新規登録には、役職が必須であること" do
+    it "ユーザーの新規登録には、ニックネームが必須であること" do
+      @user.nickname = nil
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Nickname can't be blank")
     end
     
     it "必須項目に適切な値を入力すると、ユーザーの新規登録ができること" do
+      expect(@user).to be_valid
     end
-    
-    it "必要な情報を入力すると、ログインができること" do
-    end
-    
-    it "フォームに適切な値が入力されていない状態では、新規登録・ログインはできず、そのページに留まること（新規登録/ログイン）" do
-    end
-    
-    it "トップページから、ログアウトができること" do
-    end
-    
-    it "ログアウト状態では、ヘッダーに「新規登録」「ログイン」のリンクが存在すること" do
-    end
-    
-    it "ログイン状態では、ヘッダーに「ログアウト」「New Proto」のリンクが存在すること" do
-    end
-    
-    it "ログイン状態では、トップページに「こんにちは、〇〇さん」とユーザー名が表示されていること" do
-    end
-
+        
   end
 end
