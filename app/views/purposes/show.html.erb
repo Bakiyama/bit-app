@@ -6,12 +6,23 @@
       <div class='purpose_name'>
         目標：<%= @purpose.name %>
       </div>
+      <%= link_to "編集する", edit_purpose_path(@purpose.id), class: :purpose_edit %>
+
       <div class='purpose_btn'>
-        <div class='purpose_edit'>編集する</div>
-      </div>
-      <div class='purpose_btn'>
-        <div class='purpose_delete'>削除する</div>
+        <div class='purpose_delete' id='purposeDelete'>削除する</div>
+
+        <div class='cfrm_delete' id='cfrmDelete'>
+          <div class='cfrm_message'>本当に削除しますか？</div>
+
+          <div class="cfrm_btn">
+            <%= link_to "はい", purpose_path(@purpose.id), method: :delete, class: :yes_btn %>
+            <div class='close_btn' id='closeBtn'>いいえ</div>
+          </div>
+
+        </div>
+
       </div> 
+
     </div>
     <div class='unit_filed'>
       <div class='box_sample'></div>：<%= @purpose.per %><%= @purpose.unit %>

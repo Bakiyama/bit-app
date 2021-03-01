@@ -1,0 +1,148 @@
+.formblock {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(.99);
+  background-color:rgb(243, 243, 243);
+  width: 400px;
+  height: 300px;
+  padding: 20px;
+  border: rgb(77, 182, 182) 2px solid;
+  border-radius: 10%;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.form_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_title {
+  width: 250px;
+  font-size: 35px;
+}
+
+.input_progress {
+  margin: 10px 0 20px 0 ;
+  color:rgb(74, 180, 180);
+  text-align: center;
+}
+
+.field_name {
+  width: 250px;
+}
+
+.form_comment {
+  width: 250px;
+  height: 30px;
+}
+
+.form_slct {
+  width: 200px;
+}
+
+.input_btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.add-btn {
+  background-color:rgb(74, 180, 180);
+  border-radius: 20%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action_btn {
+  width: 55px;
+  height: 30px;
+  background-color: ivory;
+  border: rgb(77, 182, 182) 2px solid;
+  border-radius: 10%;
+  padding: 1px 0;
+}
+
+.formblock.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.mask {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.mask.active {
+  opacity: 0.6;
+  visibility: visible;
+}
+
+.cfrm_delete {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(.99);
+  background-color:rgb(243, 243, 243);
+  width: 400px;
+  height: 150px;
+  padding: 20px;
+  border: rgb(77, 182, 182) 2px solid;
+  border-radius: 10%;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.cfrm_delete.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cfrm_btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.yes_btn {
+  width: 55px;
+  height: 30px;
+  background-color: ivory;
+  border: rgb(77, 182, 182) 2px solid;
+  border-radius: 10%;
+  padding: 1px 0;
+}
+
+.close_btn {
+  width: 55px;
+  height: 30px;
+  background-color: ivory;
+  border: rgb(77, 182, 182) 2px solid;
+  border-radius: 10%;
+  padding: 1px 0;
+  cursor: pointer;
+}
+
+.cfrm_message {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
